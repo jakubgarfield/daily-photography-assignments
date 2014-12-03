@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    adsf (1.2.0)
+      rack (>= 1.0.0)
+    colored (1.2)
+    cri (2.6.1)
+      colored (~> 1.2)
+    execjs (2.2.1)
+    json (1.8.1)
+    nanoc (3.7.4)
+      cri (~> 2.3)
+    rack (1.5.2)
+    rainpress (1.0)
+    uglifier (2.5.3)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf
+  nanoc
+  rainpress
+  uglifier
