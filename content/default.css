@@ -1,6 +1,6 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent} body{line-height:1} article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block} nav ul{list-style:none} blockquote,q{quotes:none} blockquote:before,blockquote:after,q:before,q:after{content:none} a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent} ins{background-color:#ff9;color:#000;text-decoration:none} mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold} del{text-decoration:line-through} abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help} table{border-collapse:collapse;border-spacing:0} hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0} input,select{vertical-align:middle}
 header, main, footer, .clearfix:after { content: ""; display: table; clear: both;}
-body { background-color: #72467A; color: #ffffff; margin: 2em auto; width: 780px; font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 21px; line-height: 145%; text-align: center; }
+body { background-color: #72467A; color: #ffffff;  margin: 2em auto; width: 780px; font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 21px; line-height: 145%; text-align: center; }
 main, footer, header { margin: 1em auto; }
 svg { fill: #ffffff;}
 
@@ -13,8 +13,12 @@ h1 a, h1 a:hover, h1 a:visited { color: #ffffff; text-decoration: none; }
 a, a:hover, a:visited, a:active { color: #3B004A; }
 a:hover { text-decoration: none; }
 
-.today { margin-bottom: 2em;}
-.adsense { margin-bottom: 1em;}
+.today { margin-bottom: 1em;}
+.adsense { margin-top: 2em;}
 p { margin: 1em; }
-footer { font-size: 75%; }
-.attribution { font-size: 60%; margin-top: 5em; line-height: 200%;}
+footer { font-size: 70%; color: silver; }
+.attribution { font-size: 85%; margin-top: 2em; line-height: 200%;}
+
+.loading { -webkit-animation: loading 2s infinite; animation: loading 2s infinite; }
+@-webkit-keyframes loading { 0% {opacity: 0.5;} 50% {opacity: 1;} 100% {opacity:0.5} }
+@keyframes loading { 0% {opacity: 0.5;} 50% {opacity: 1;} 100% {opacity:0.5} }
