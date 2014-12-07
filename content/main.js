@@ -231,7 +231,7 @@ var themes = [
 "Find a sign in front of a vista that tells a story. (Don't walk on the grass.) Make a photograph and post it.",
 "It's Independence Day in the U.S (fireworks!). Make a photo with celebration as the theme, wherever you are.",
 "Create an optical illusion using forced perspective today. Make a distant object appear closer than it actually is.",
-"Today's theme is the color blue. Blue sky. Blue plate. Blue M&amp,Ms. Make a photo of something blue and post it today.",
+"Today's theme is the color blue. Blue sky. Blue plate. Blue M&amp;Ms. Make a photo of something blue and post it today.",
 "Look for an area with a big differential in light. Make a photo exposed for the brightest area, isolating a subject.",
 "Make a photo with the number 4 in it one way or another. Maybe 4 items. Maybe a written number. Maybe more abstract.",
 "Glass is a material that's used in so many different ways. Make a photograph of a glass subject today.",
@@ -330,7 +330,7 @@ var themes = [
 "Create a photograph with a distinctly asymmetrical composition today. Pick a subject that goes with the theme.",
 "Let's start out the new week by making a photo with a red point of interest. Make sure your subject really stands out.",
 "Stairs and ramps lead the eye and take us places. Make a photo of a stair or ramp that you see today.",
-"Think upside down &amp, really change your view point. Make a photo where you or your subject is upside down.",
+"Think upside down &amp; really change your view point. Make a photo where you or your subject is upside down.",
 "Fire is dramatic, as it its effect. Make a picture of a flame or something changed by fire or flame.",
 "Illustrate the act or emotion of tension in a photograph today.",
 "Make a photograph of an edge of something today. The edge of a knife, the waters edge, or some other edge.",
@@ -649,7 +649,7 @@ var themes = [
 "Make a photograph with a different point of view than you normally would consider.",
 "What's a photograph you've wanted to make for a while but haven't for some reason? Make it today.",
 "Make a photograph composed of earth tones today. Use contrast and composition to provide visual excitement.",
-"Create a photo with a single element, no distractions, &amp, lots of contrast.",
+"Create a photo with a single element, no distractions, &amp; lots of contrast.",
 "Make a photograph with an emphasis on the sky today.",
 "It's all about the color red today. Make a photograph that is full of a red subject.",
 "Make a photograph of a plastic object that you’ve used today.",
@@ -691,7 +691,20 @@ var themes = [
 "For the last Daily Shoot assignment, make a photograph today that is important to you. One that says what you want to say"
 ];
 
-var currentTheme = themes[Math.floor(Math.random() * themes.length)];
-var container = document.getElementById("theme-container");
-container.innerHTML = currentTheme;
-container.className = "";
+function setTheme(container, theme) {
+  if (container) {
+    container.innerHTML = theme;
+    container.className = "";
+  }
+}
+
+function getRandomIndex() {
+  return Math.floor(Math.random() * themes.length);
+}
+
+function getTodayIndex() {
+  return Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24)) % themes.length;
+}
+
+setTheme(document.getElementById("random-theme"), themes[getRandomIndex()]);
+setTheme(document.getElementById("today-theme"), themes[getTodayIndex()]);

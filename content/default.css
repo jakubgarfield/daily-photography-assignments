@@ -13,11 +13,17 @@ h1 a, h1 a:hover, h1 a:visited { color: #ffffff; text-decoration: none; }
 a, a:hover, a:visited, a:active { color: #3B004A; }
 a:hover { text-decoration: none; }
 
-.today { margin-bottom: 1em;}
+.today, .random { margin-bottom: 1em;}
 .adsense { margin-top: 2em;}
 p { margin: 1em; }
-footer { font-size: 70%; color: silver; }
-.attribution { font-size: 85%; margin-top: 2em; line-height: 200%;}
+.notes { font-size: 70%; color: silver; margin-top: 1em;}
+.attribution { color: silver; font-size: 60%; margin-top: 0em; line-height: 200%;}
+
+.menu { color: silver; }
+
+.all { font-size: 85%; text-align: left;}
+.all li { margin-bottom: 1em; }
+
 
 .loading { -webkit-animation: loading 2s infinite; animation: loading 2s infinite; }
 @-webkit-keyframes loading { 0% {opacity: 0.5;} 50% {opacity: 1;} 100% {opacity:0.5} }
