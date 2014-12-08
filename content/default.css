@@ -14,7 +14,7 @@ a, a:hover, a:visited, a:active { color: #3B004A; }
 a:hover { text-decoration: none; }
 
 .today, .random { margin-bottom: 1em;}
-.adsense { margin-top: 2em;}
+.adsense { margin-bottom: 1em;}
 p { margin: 1em; }
 .notes { font-size: 70%; color: silver; margin-top: 1em;}
 .attribution { color: silver; font-size: 60%; margin-top: 0em; line-height: 200%;}
@@ -23,6 +23,8 @@ p { margin: 1em; }
 
 .all { font-size: 85%; text-align: left;}
 .all li { margin-bottom: 1em; }
+
+.social { color: silver; }
 
 
 .loading { -webkit-animation: loading 2s infinite; animation: loading 2s infinite; }

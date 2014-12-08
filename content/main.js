@@ -691,10 +691,20 @@ var themes = [
 "For the last Daily Shoot assignment, make a photograph today that is important to you. One that says what you want to say"
 ];
 
-function setTheme(container, theme) {
+function setSharing(themeIndex) {
+  var twitter = document.getElementById("twitter-button");
+  twitter.href = "https://twitter.com/intent/tweet?button_hashtag=ds" + themeIndex + "&text=" + encodeURIComponent(themes[themeIndex]);
+
+  var encodedHash = encodeURIComponent("#ds" + themeIndex);
+  document.getElementById("flickr-search").href = "https://www.flickr.com/search/?q=" + encodedHash;
+  document.getElementById("twitter-search").href = "https://twitter.com/search?q=" + encodedHash;
+}
+
+function setTheme(container, themeIndex) {
   if (container) {
-    container.innerHTML = theme;
+    container.innerHTML = themeIndex + ". " + themes[themeIndex];
     container.className = "";
+    setSharing(themeIndex);
   }
 }
 
@@ -706,5 +716,7 @@ function getTodayIndex() {
   return Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24)) % themes.length;
 }
 
-setTheme(document.getElementById("random-theme"), themes[getRandomIndex()]);
-setTheme(document.getElementById("today-theme"), themes[getTodayIndex()]);
+setTheme(document.getElementById("random-theme"), getRandomIndex());
+setTheme(document.getElementById("today-theme"), getTodayIndex());
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
