@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Random photography assignments for daily shooting." />
+    <meta name="description" content="<%= @item[:title] ? @item[:title] : "Awesome photography assignments for daily shooting." %>" />
     <meta name="keywords" content="<%= @item[:tags] ? @item[:tags].join(", ") : "daily, photo, assignments, shooting, photography" %>" />
     <meta name="robots" content="all, follow" />
     <meta property="og:title" content="Photography assignments">
