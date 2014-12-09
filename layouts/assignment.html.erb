@@ -1,0 +1,12 @@
+<% render "default" do %>
+  <h2>Today's assignment</h2>
+  <div class="today">
+    <p><%= yield %></p>
+  </div>
+
+  <div class="social">
+    <a href="https://twitter.com/intent/tweet?button_hashtag=ds<%= @item[:index] %>&text=<%= URI.escape(@item[:title]) %>" id="twitter-button" class="twitter-hashtag-button" data-size="large" data-related="jakubgarfield" data-url="http://photographyassignments.org/daily/<%= @item[:index] %>">Tweet</a>
+
+    <p>See others on <a href="https://twitter.com/search?q=<%= URI.escape("#ds#{@item[:index]}") %>" id="twitter-search">twitter</a> or <a href="https://www.flickr.com/search/?q=<%= URI.escape("#ds#{@item[:index]}") %>" id="flickr-search">flickr</a></p>
+  </div>
+<% end %>

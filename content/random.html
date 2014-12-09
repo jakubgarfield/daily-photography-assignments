@@ -2,6 +2,10 @@
 <div class="random">
   <p class="loading" id="random-theme">Loading a random assignment...</p>
 </div>
+<script type="text/javascript" charset="utf-8">
+  function getRandomIndex() { return Math.floor(Math.random() * 690) + 1; }
+  window.location.href = "/daily/" + getRandomIndex();
+</script>
 
 <div class="social">
   <a href="https://twitter.com/intent/tweet?button_hashtag=ds" id="twitter-button" class="twitter-hashtag-button" data-size="large" data-related="jakubgarfield" data-url="http://photographyassignments.org">Tweet</a>

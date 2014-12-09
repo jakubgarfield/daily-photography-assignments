@@ -3,7 +3,7 @@
   <p class="loading" id="today-theme">Loading an assignment for today...</p>
 </div>
 
-<div class="social">
-  <a href="https://twitter.com/intent/tweet?button_hashtag=ds" id="twitter-button" class="twitter-hashtag-button" data-size="large" data-related="jakubgarfield" data-url="http://photographyassignments.org">Tweet</a>
-  <p>See others on <a href="#" id="twitter-search">twitter</a> or <a href="#" id="flickr-search">flickr</a></p>
-</div>
+<script type="text/javascript" charset="utf-8">
+  function getTodayIndex() { return (Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24)) % 690) + 1; }
+  window.location.href = "/daily/" + getTodayIndex();
+</script>

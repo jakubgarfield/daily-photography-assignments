@@ -13,6 +13,15 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+compile 'daily/*' do
+  filter :kramdown
+  layout 'assignment'
+end
+
+compile 'sitemap' do
+  filter :erb
+end
+
 compile '*' do
   if item[:extension] == 'css'
     filter :rainpress
@@ -24,6 +33,10 @@ compile '*' do
     filter :erb
     layout 'default'
   end
+end
+
+route 'sitemap' do
+  item.identifier.chop + '.xml'
 end
 
 route '*' do
