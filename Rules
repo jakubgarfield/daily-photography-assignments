@@ -51,7 +51,7 @@ route '*' do
   if ['css', 'js'].include?(item[:extension])
     item.identifier.chop + '.' + item[:extension]
   elsif item.binary?
-    item.identifier.chop + '.' + item[:extension]
+    item.identifier.chop + (item[:extension].nil? ? "" : ("." + item[:extension]))
   else
     item.identifier + 'index.html'
   end
