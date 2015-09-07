@@ -61,3 +61,6 @@ DEPENDENCIES
   nanoc
   rainpress
   uglifier
+
+BUNDLED WITH
+   1.10.2
